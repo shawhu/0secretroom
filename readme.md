@@ -4,7 +4,7 @@
 中文版本 https://github.com/ericgu2017/0secretroom/blob/master/readme_cn.me
 
 Demo video
-
+https://youtu.be/f1aJCYCM8LE
 
 ### Features
 
