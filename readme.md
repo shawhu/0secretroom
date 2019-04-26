@@ -81,4 +81,4 @@ https://developer.mozilla.org/en-US/docs/Web/API/Web_Crypto_API
 多登
 - 张三在手机上创建自己的多登链接（或者二维码）
 - 张三在另外一台设备上直接用多登链接访问，登入聊天室
-- 张三可以在任意已经登录的
+- 张三可以在任意已经登录设备上管理
