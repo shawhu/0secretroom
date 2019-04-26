@@ -1,7 +1,7 @@
 # ZeroSecretRoom
 ## A fully working H5 chatroom implementation with encryption.
 
-中文版本 https://github.com/ericgu2017/0secretroom/blob/master/readme_cn.me
+中文版本在后面
 
 Demo video
 https://youtu.be/f1aJCYCM8LE
