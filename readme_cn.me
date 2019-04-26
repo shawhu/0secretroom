@@ -25,6 +25,21 @@ https://developer.mozilla.org/en-US/docs/Web/API/Web_Crypto_API
 - dotnet core for the server platform and vue.js 2.x/3.x for the actual webclient
 
 使用场景举例
+新建和邀请
 
-- 张三创建了一个聊天室。他的
-https://developer.mozilla.org/en-US/docs/Web/API/Web_Crypto_API
+- 张三创建了一个聊天室。在创建的时候他浏览器中初始化冰保存了主AES256的key
+- 张三创建了一个邀请链接（或者二维码）给李四。李四扫码访问了这个链接。
+- 这个时候张三和李四会各自创建一对ecdh公钥私钥，然后相互交换各自的公钥，最后并且使用ECDH中derivekey功能获得一个临时的aes256的key
+- ECDH私钥只存在于张三李四各自浏览器上，并不会传输到服务器。而derivekey必须要用到各自的私钥。服务器只拿到了各自公钥，所以没用。而且
+- 每次邀请新人都会重新创建ECDH密钥对
+- 张三李四使用这个临时的aes256key来加密传输实际的房间主aes256key。最后，李四拿到了主aes256key，李四加入了聊天室
+- 张三和李四从此和睦的生活在一起
+
+登录
+- 用户
+- 张三和李四从此和睦的生活在一起
+
+传输
+- 张三发消息。消息被加密后通过websocket传到服务器
+- 服务器完全不动直接转发给所有同聊天室人等。等到所有人都确认收到后，服务器立刻从内存删除
+- 
