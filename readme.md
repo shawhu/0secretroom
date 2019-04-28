@@ -5,6 +5,7 @@
 
 Installation
 
+    yum install wget or apt install wget
     wget https://github.com/ericgu2017/0secretroom/releases/download/0.1/latest.tar.gz
     tar zxvf latest.tar.gz
     cd latest
