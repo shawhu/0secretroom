@@ -1,3 +1,10 @@
+#yum update
+read -p "Let's run yum update first? Highly recommended. " -n 1 -r
+echo    # (optional) move to a new line
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+    yum update -y
+fi
 #download and install wget
 sudo yum install wget -y
 #install semanage
