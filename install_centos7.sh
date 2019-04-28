@@ -1,16 +1,16 @@
 #install file for CentOS 7
 #yum update
-echo "Let's run yum update first? Highly recommended. "
+echo "Let's run yum update first? Highly recommended for a new system."
 echo ""
-read -p "Enter Y or y to start, anything else to bypass" -n 1 -r
+read -p "Enter Y or y to start, anything else to bypass." -n 1 -r
 echo    # (optional) move to a new line
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
     yum update -y
 fi
-echo "Now we are going to start the installation, it normally takes several minutes to complete and it can't be interupted in the middle"
+echo "Now we are going to start the installation, it takes several minutes and can't be interupted."
 echo 
-read -p "Shall we start the process? Enter Y or y to start, anything else to quit" -n 1 -r
+read -p "Shall we start the process? Enter Y or y to start, anything else to quit." -n 1 -r
 echo    # (optional) move to a new line
 if [[ ! $REPLY =~ ^[Yy]$ ]]
 then
