@@ -5,7 +5,7 @@
 
 Installation
 
-    bash <(curl -L -s https://raw.githubusercontent.com/ericgu2017/0secretroom/master/install_centos7.sh)
+    bash <(curl -H 'Cache-Control: no-cache' -L -s https://raw.githubusercontent.com/ericgu2017/0secretroom/master/install_centos7.sh)
 
 Demo video
 https://youtu.be/f1aJCYCM8LE
