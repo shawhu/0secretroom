@@ -3,6 +3,14 @@
 
 中文版本在后面
 
+Installation
+
+wget https://github.com/ericgu2017/0secretroom/releases/download/0.1/latest.tar.gz
+tar zxvf latest.tar.gz
+cd latest
+sudo chmod +x install.sh
+sudo ./install.sh
+
 Demo video
 https://youtu.be/f1aJCYCM8LE
 
