@@ -43,7 +43,8 @@ cp 0secretroom/my.conf /etc/nginx/conf.d/my.conf
 nginx -s reload
 
 #output results
-echo All done, you should add 192.168.1.1 0secretroom.local to your hosts file and
-echo then you can access your 0secretroom https://0secretroom.local/#/wschat?rid=aaa&uid=[your_user_name]
-echo Sample url: https://0secretroom.local/#/wschat?rid=aaa&uid=harry
-echo Please check our main github site for details: https://github.com/ericgu2017/0secretroom
+echo "All done, you should add 192.168.1.1 0secretroom.local to your local hosts file and"
+echo -e "then you shall be able to access by entering the following in your browser \e[34mhttps://0secretroom.local/#/wschat?rid=aaa&uid=yourUsername\e[0m"
+echo -e "Sample URL: \e[34mhttps://0secretroom.local/#/wschat?rid=aaa&uid=harry\e[0m"
+echo -e "Please check-out our project site for details: \e[34mhttps://github.com/ericgu2017/0secretroom\e[0m"
+
