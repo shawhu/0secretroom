@@ -49,12 +49,13 @@ systemctl start nginx
 semanage permissive -a httpd_t
 
 #generate self-signed cert
+echo "We will generate a self-signed ssl certificate now..."
 sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/certs/nginx-selfsigned.key -out /etc/ssl/certs/nginx-selfsigned.crt
 cp 0secretroom/my.conf /etc/nginx/conf.d/my.conf
 nginx -s reload
 
 #output results
-echo "All done, you should add 192.168.1.1 0secretroom.local to your local hosts file and"
+echo -e "All done, you should add   \e[34m192.168.1.1 0secretroom.local\e[0m   to your local hosts file and"
 echo -e "then you shall be able to access by entering the following in your browser \e[34mhttps://0secretroom.local/#/wschat?rid=aaa&uid=yourUsername\e[0m"
 echo -e "Sample URL: \e[34mhttps://0secretroom.local/#/wschat?rid=aaa&uid=harry\e[0m"
 echo -e "Please check-out our project site for details: \e[34mhttps://github.com/ericgu2017/0secretroom\e[0m"
