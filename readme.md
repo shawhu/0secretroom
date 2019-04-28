@@ -5,7 +5,7 @@
 
 Installation
 
-    bash <(curl -L -s https://github.com/ericgu2017/0secretroom/blob/master/install_centos7.sh)
+    bash <(curl -L -s https://raw.githubusercontent.com/ericgu2017/0secretroom/master/install_centos7.sh)
 
 Demo video
 https://youtu.be/f1aJCYCM8LE
