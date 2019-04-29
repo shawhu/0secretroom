@@ -3,6 +3,7 @@
 echo "********************************************************************"
 echo "推荐先跑一遍yum update更新一下系统"
 echo "Shall we run yum update for you first? Highly recommended for a new system."
+echo "********************************************************************"
 echo ""
 echo "输入Y/y开始，其他键取消"
 read -p "Enter Y or y to start, anything else to bypass." -n 1 -r
@@ -14,6 +15,7 @@ fi
 echo "********************************************************************"
 echo "安装正式开始，大概需要几分钟时间中间不能打断"
 echo "Now we are going to start the installation, it takes several minutes and it can't be interupted"
+echo "********************************************************************"
 echo 
 echo "按Y/y开始，其他键取消"
 read -p "Enter Y or y to start, anything else to quit." -n 1 -r
@@ -60,6 +62,7 @@ echo "We will generate a self-signed ssl certificate, please follow the instruct
 echo "Common name请输入0secretroom.local"
 echo "Common name must be 0secretroom.local"
 echo "********************************************************************"
+echo 
 echo "按任意键开始"
 read -p "Press anykey to continue" -n 1 -r
 sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/certs/nginx-selfsigned.key -out /etc/ssl/certs/nginx-selfsigned.crt
