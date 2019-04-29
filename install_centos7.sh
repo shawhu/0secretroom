@@ -53,7 +53,7 @@ systemctl start nginx
 semanage permissive -a httpd_t
 
 #generate self-signed cert
-echo "接下来要系统要产生一个自签名用于https加密的ssl证书，请根据提示输入一些信息。可能是英语界面"
+echo "接下来要系统要产生一个自签名用于https加密的ssl证书，请根据英语界面提示输入"
 echo "Common name请输入0secretroom.local"
 echo "We will generate a self-signed ssl certificate, please follow the instruction to enter various information"
 echo "Common name must be 0secretroom.local"
@@ -69,8 +69,8 @@ nginx -s reload
 #get local ip
 myip=`hostname -I`
 echo -e "All done, you should add  \e[34m$myip 0secretroom.local\e[0m  to /etc/hosts and"
-echo -e "you shall be able to access by entering the following in your browser \e[34mhttps://0secretroom.local/#/wschat?rid=aaa&uid=yourUsername\e[0m"
-echo -e "Sample URL: \e[34mhttps://0secretroom.local/#/wschat?rid=aaa&uid=harry\e[0m"
+echo -e "in your browser \e[34mhttps://0secretroom.local/#/wschat?rid=aaa&uid=yourUsername\e[0m"
+echo -e "Example: \e[34mhttps://0secretroom.local/#/wschat?rid=aaa&uid=harry\e[0m"
 echo -e "Please check-out our project site for details: \e[34mhttps://github.com/ericgu2017/0secretroom\e[0m"
 echo -e "请自行把 \e[34m$myip 0secretroom.local\e[0m  添加到/etc/hosts文件中"
 echo -e "你可以试下访问 \e[34mhttps://0secretroom.local/#/wschat?rid=aaa&uid=随便起一个管理员用户名\e[0m"
