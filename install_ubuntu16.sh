@@ -41,17 +41,17 @@ fi
 mkdir 0secretroom -p
 wget https://github.com/ericgu2017/0secretroom/releases/download/0.2/latest.tar.gz -O latest.tar.gz
 tar zxvf latest.tar.gz -C 0secretroom
-cp 0secretroom/web.service /etc/systemd/system
-systemctl enable web.service
-systemctl start web
+sudo cp 0secretroom/web.service /etc/systemd/system
+sudo systemctl enable web.service
+sudo systemctl start web
 #add firewalld rules
 sudo ufw allow 80:81/tcp
 sudo ufw allow 443/tcp
 sudo ufw reload
 #add nginx
 sudo apt install nginx -y
-systemctl enable nginx
-systemctl start nginx
+sudo systemctl enable nginx
+sudo systemctl start nginx
 
 #put nginx to selinux permissive list
 #semanage permissive -a httpd_t
@@ -69,7 +69,7 @@ read -p "Press anykey to continue" -n 1 -r
 sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/certs/nginx-selfsigned.key -out /etc/ssl/certs/nginx-selfsigned.crt
 #install nginx config file
 curl https://raw.githubusercontent.com/ericgu2017/0secretroom/master/nginx.conf -o /etc/nginx/sites-enabled/nginx.conf
-nginx -s reload
+sudo nginx -s reload
 
 
 #output results
