@@ -33,9 +33,9 @@ sudo apt install wget -y
 if [ ! -f "./dotnet-sdk-2.2.203-linux-x64.tar.gz" ]; then
     echo "dotnet install file not found, download a new one"
     wget https://swzbtest1.oss-cn-hangzhou.aliyuncs.com/dotnet-sdk-2.2.203-linux-x64.tar.gz
-    mkdir -p $HOME/dotnet && tar zxf dotnet-sdk-2.2.203-linux-x64.tar.gz -C $HOME/dotnet
-    export DOTNET_ROOT=$HOME/dotnet
-    export PATH=$PATH:$HOME/dotnet
+    mkdir -p /root/dotnet && tar zxf dotnet-sdk-2.2.203-linux-x64.tar.gz -C /root/dotnet
+    export DOTNET_ROOT=/root/dotnet
+    export PATH=$PATH:/root/dotnet
 fi
 #download 0secretroom
 sudo mkdir /root/0secretroom -p
