@@ -30,13 +30,15 @@ sudo yum install wget -y
 yum install policycoreutils-python -y
 
 #download dotnet sdk and install it
-wget https://swzbtest1.oss-cn-hangzhou.aliyuncs.com/dotnet-sdk-2.2.203-linux-x64.tar.gz
-mkdir -p $HOME/dotnet && tar zxf dotnet-sdk-2.2.203-linux-x64.tar.gz -C $HOME/dotnet
-export DOTNET_ROOT=$HOME/dotnet
-export PATH=$PATH:$HOME/dotnet
+if [ ! -f "./dotnet-sdk-2.2.203-linux-x64.tar.gz" ]; then
+   wget https://swzbtest1.oss-cn-hangzhou.aliyuncs.com/dotnet-sdk-2.2.203-linux-x64.tar.gz
+    mkdir -p $HOME/dotnet && tar zxf dotnet-sdk-2.2.203-linux-x64.tar.gz -C $HOME/dotnet
+    export DOTNET_ROOT=$HOME/dotnet
+    export PATH=$PATH:$HOME/dotnet
+fi
 #download 0secretroom
 mkdir 0secretroom -p
-wget https://github.com/ericgu2017/0secretroom/releases/download/0.2/latest.tar.gz
+wget https://github.com/ericgu2017/0secretroom/releases/download/0.2/latest.tar.gz -O latest.tar.gz
 tar zxvf latest.tar.gz -C 0secretroom
 cp 0secretroom/web.service /etc/systemd/system
 systemctl enable web.service
