@@ -38,10 +38,10 @@ if [ ! -f "./dotnet-sdk-2.2.203-linux-x64.tar.gz" ]; then
     export PATH=$PATH:$HOME/dotnet
 fi
 #download 0secretroom
-mkdir 0secretroom -p
+sudo mkdir /root/0secretroom -p
 wget https://github.com/ericgu2017/0secretroom/releases/download/0.2/latest.tar.gz -O latest.tar.gz
-tar zxvf latest.tar.gz -C 0secretroom
-sudo cp 0secretroom/web.service /etc/systemd/system
+sudo tar zxvf latest.tar.gz -C /root/0secretroom
+sudo cp /root/0secretroom/web.service /etc/systemd/system
 sudo systemctl enable web.service
 sudo systemctl start web
 #add firewalld rules
