@@ -7,8 +7,13 @@
 
     Centos 7.x
     bash <(curl -H 'Cache-Control: no-cache' -L -s https://raw.githubusercontent.com/ericgu2017/0secretroom/master/install_centos7.sh)
+    
     Ubuntu 16.x
     bash <(curl -H 'Cache-Control: no-cache' -L -s https://raw.githubusercontent.com/ericgu2017/0secretroom/master/install_ubuntu16.sh)
+    
+    Ubuntu 18.x
+    bash <(curl -H 'Cache-Control: no-cache' -L -s https://raw.githubusercontent.com/ericgu2017/0secretroom/master/install_ubuntu18.sh)
+    
 
 Demo video
 https://youtu.be/f1aJCYCM8LE
@@ -40,6 +45,9 @@ https://youtu.be/f1aJCYCM8LE
 ### What's not?
 - A production grade high level security chatroom used in Gov'nt and any simular situations.
 - Anything serious
+
+### Security concerns
+- The default room rid=aaa is not secure and it can only be used in a demo situation because the AESkey is fixed (this is by design, room aaa is used in unit test). for real security room please create a new room from the menu and invite people in that room.
 
 
 闪亮的功能点
@@ -91,6 +99,9 @@ https://developer.mozilla.org/en-US/docs/Web/API/Web_Crypto_API
 - 张三在另外一台设备上直接用多登链接访问，登入聊天室
 - 多登设备数量没有限制。理论上可以在所有手机，电脑设备上登录同一个账号，互通有无
 - 张三可以在任意已经登录设备上管理删除其他登录设备（未来功能）
+
+安全性
+- 默认rid=aaa的聊天室只能用于测试，他的房间的主AESkey是固定的。请从菜单中创建新的聊天室然后再邀请其他人
 
 
 
