@@ -45,7 +45,6 @@ firewall-cmd --reload
 #add nginx
 sudo yum install epel-release -y
 sudo yum install nginx -y
-sudo apt install nginx -y
 systemctl enable nginx
 systemctl start nginx
 
