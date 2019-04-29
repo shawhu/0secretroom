@@ -31,7 +31,8 @@ yum install policycoreutils-python -y
 
 #download dotnet sdk and install it
 if [ ! -f "./dotnet-sdk-2.2.203-linux-x64.tar.gz" ]; then
-   wget https://swzbtest1.oss-cn-hangzhou.aliyuncs.com/dotnet-sdk-2.2.203-linux-x64.tar.gz
+    echo "dotnet install file not found, download a new one"
+    wget https://swzbtest1.oss-cn-hangzhou.aliyuncs.com/dotnet-sdk-2.2.203-linux-x64.tar.gz
     mkdir -p $HOME/dotnet && tar zxf dotnet-sdk-2.2.203-linux-x64.tar.gz -C $HOME/dotnet
     export DOTNET_ROOT=$HOME/dotnet
     export PATH=$PATH:$HOME/dotnet
