@@ -3,7 +3,7 @@
 
 中文版本在后面
 
-Installation
+### Installation
 
     bash <(curl -H 'Cache-Control: no-cache' -L -s https://raw.githubusercontent.com/ericgu2017/0secretroom/master/install_centos7.sh)
 
@@ -24,7 +24,7 @@ https://youtu.be/f1aJCYCM8LE
 ### What's been used?
 - websockets or specifically, Microsoft SignalR, for instant messeging between relay server and the clients.
 - AES256 to encrypt all the messeges.
-- ECDH used to safely distribute roomkey (AES256 key) on the Internet.
+- ECDH was used to safely transfer the mainkey (AES256 key) on the Internet (ECDH derivekey to create a temp AESkey and use that to encrypt the real key).
 - WebCrypto was used to greatly enhanced the encryption/decryption speed on the web. (https://www.w3.org/TR/WebCryptoAPI/)
 - Vue js framework
 - dotnet core server web services
