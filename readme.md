@@ -1,5 +1,5 @@
 # ZeroSecretRoom
-## A fully working H5 chatroom implementation with encryption.
+## A working Html5 chatroom implementation with end-to-end encryption.
 
 中文版本在后面
 
