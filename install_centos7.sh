@@ -60,8 +60,10 @@ echo "Common name must be 0secretroom.local"
 echo "按任意键开始"
 read -p "Press anykey to continue" -n 1 -r
 sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/certs/nginx-selfsigned.key -out /etc/ssl/certs/nginx-selfsigned.crt
-cp 0secretroom/my.conf /etc/nginx/conf.d/my.conf
+#install nginx config file
+curl https://raw.githubusercontent.com/ericgu2017/0secretroom/master/nginx.conf -o /etc/nginx/conf.d/nginx.conf
 nginx -s reload
+
 
 #output results
 #get local ip
