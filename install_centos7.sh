@@ -32,7 +32,7 @@ export DOTNET_ROOT=$HOME/dotnet
 export PATH=$PATH:$HOME/dotnet
 #download 0secretroom
 mkdir 0secretroom -p
-wget https://github.com/ericgu2017/0secretroom/releases/download/0.1/latest.tar.gz
+wget https://github.com/ericgu2017/0secretroom/releases/download/0.2/latest.tar.gz
 tar zxvf latest.tar.gz -C 0secretroom
 cp 0secretroom/web.service /etc/systemd/system
 systemctl enable web.service
