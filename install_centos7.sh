@@ -69,12 +69,8 @@ nginx -s reload
 #get local ip
 myip=`hostname -I`
 echo -e "All done, you should add  \e[34m$myip 0secretroom.local\e[0m  to /etc/hosts and"
-echo -e "in your browser \e[34mhttps://0secretroom.local/#/wschat?rid=aaa&uid=yourUsername\e[0m"
-echo -e "Example: \e[34mhttps://0secretroom.local/#/wschat?rid=aaa&uid=harry\e[0m"
+echo -e "in your browser \e[34mhttps://0secretroom.local/#/wschat?rid=aaa&uid=testadmin\e[0m"
 echo -e "Please check-out our project site for details: \e[34mhttps://github.com/ericgu2017/0secretroom\e[0m"
 echo -e "请自行把 \e[34m$myip 0secretroom.local\e[0m  添加到/etc/hosts文件中"
-echo -e "你可以试下访问 \e[34mhttps://0secretroom.local/#/wschat?rid=aaa&uid=随便起一个管理员用户名\e[0m"
-echo -e "举例： \e[34mhttps://0secretroom.local/#/wschat?rid=aaa&uid=harry\e[0m"
+echo -e "你可以试下访问 \e[34mhttps://0secretroom.local/#/wschat?rid=aaa&uid=testadmin\e[0m"
 echo -e "如有问题请访问项目网站 \e[34mhttps://github.com/ericgu2017/0secretroom\e[0m"
-
-
