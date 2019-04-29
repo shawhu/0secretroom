@@ -68,7 +68,7 @@ echo "按任意键开始"
 read -p "Press anykey to continue" -n 1 -r
 sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/certs/nginx-selfsigned.key -out /etc/ssl/certs/nginx-selfsigned.crt
 #install nginx config file
-curl https://raw.githubusercontent.com/ericgu2017/0secretroom/master/nginx.conf -o /etc/nginx/sites-enabled/nginx.conf
+sudo curl https://raw.githubusercontent.com/ericgu2017/0secretroom/master/nginx.conf -o /etc/nginx/sites-enabled/nginx.conf
 sudo nginx -s reload
 
 
