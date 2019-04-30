@@ -8,7 +8,7 @@
     Centos 7.x
     bash <(curl -H 'Cache-Control: no-cache' -L -s https://raw.githubusercontent.com/ericgu2017/0secretroom/master/install_centos7.sh)
     
-    Ubuntu 16.x & 18.x
+    Ubuntu 16.x & 18.x & 19.x
     bash <(curl -H 'Cache-Control: no-cache' -L -s https://raw.githubusercontent.com/ericgu2017/0secretroom/master/install_ubuntu.sh)
     
     
