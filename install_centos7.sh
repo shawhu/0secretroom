@@ -66,7 +66,7 @@ echo "Common name请输入0secretroom.local或者你正式域名，该域名指�
 echo "Common name must be 0secretroom.local or a real domain name that pointed to this server"
 echo "********************************************************************"
 echo 
-echo -ne "请输入网站域名 please enter site domain name:"
+echo -ne "请输入网站域名 please enter site domain name: "
 read commonname
 sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/certs/nginx-selfsigned.key -out /etc/ssl/certs/nginx-selfsigned.crt -subj "/C=US/ST=Denial/L=Springfield/O=Dis/CN=$commonname"
 #install nginx config file
@@ -79,12 +79,12 @@ nginx -s reload
 myip=`hostname -I`
 echo "********************************************************************"
 echo -e "All done, due to the fact that webcrypto api only works under https, we took the liberty of generating a self-signed ssl key"
-echo -e "You should add  \e[32m$myip 0secretroom.local\e[0m  to /etc/hosts and"
-echo -e "in your browser \e[32mhttps://0secretroom.local/#/wschat?rid=aaa&uid=testadmin\e[0m"
+echo -e "If you do not have a real domain name you should add  \e[32m$myip $commonname\e[0m  to /etc/hosts and"
+echo -e "in your browser \e[32mhttps://$commonname/#/wschat?rid=aaa&uid=testadmin\e[0m"
 echo -e "Please check-out our project site for details: \e[32mhttps://github.com/ericgu2017/0secretroom\e[0m"
 echo -e "系统安装成功完成。来自于webcrypto标准安全限制，本产品只能用于https环境"
 echo -e "因此我们在安装过程中产生了一个自签名的ssl证书"
-echo -e "请自行把 \e[32m$myip 0secretroom.local 或者正式域名\e[0m  添加到/etc/hosts文件中"
-echo -e "你可以试下访问 \e[32mhttps://0secretroom.local/#/wschat?rid=aaa&uid=testadmin\e[0m"
+echo -e "如果你没有正式域名，请自行把 \e[32m$myip $commonname\e[0m  添加到/etc/hosts文件中"
+echo -e "你可以试下访问 \e[32mhttps://$commonname/#/wschat?rid=aaa&uid=testadmin\e[0m"
 echo -e "如有问题请访问项目网站 \e[32mhttps://github.com/ericgu2017/0secretroom\e[0m"
 echo "********************************************************************"
