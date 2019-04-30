@@ -66,7 +66,7 @@ echo "Common name请输入0secretroom.local或者你正式域名，该域名指�
 echo "Common name must be 0secretroom.local or a real domain name that pointed to this server"
 echo "********************************************************************"
 echo 
-echo -ne "请输入网站域名 please enter site domain name"
+echo -ne "请输入网站域名 please enter site domain name:"
 read commonname
 sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/certs/nginx-selfsigned.key -out /etc/ssl/certs/nginx-selfsigned.crt -subj "/C=US/ST=Denial/L=Springfield/O=Dis/CN=$commonname"
 #install nginx config file
