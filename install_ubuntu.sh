@@ -74,14 +74,14 @@ sudo nginx -s reload
 #output results
 #get local ip
 myip=`hostname -I`
-echo "********************************************************************"
-echo -e "All done, due to the fact that webcrypto api only works under https, we took the liberty of generating a self-signed ssl key"
+echo "**********************************************************************************"
+echo -e "All done, because WebCrypto API only works with https, we took the liberty and we generated a self-signed ssl key"
 echo -e "If you do not have a real domain name you should add  \e[32m$myip $commonname\e[0m  to /etc/hosts and"
-echo -e "in your browser \e[32mhttps://$commonname/#/wschat?rid=aaa&uid=testadmin\e[0m"
+echo -e "try the following link in your browser: \e[32mhttps://$commonname/#/wschat?rid=aaa&uid=testadmin\e[0m"
 echo -e "Please check-out our project site for details: \e[32mhttps://github.com/ericgu2017/0secretroom\e[0m"
-echo -e "系统安装成功完成。来自于webcrypto标准安全限制，本产品只能用于https环境"
-echo -e "因此我们在安装过程中产生了一个自签名的ssl证书"
+echo -e "系统安装成功完成。由于WebCrypto API标准安全限制，本产品只能用于https环境"
+echo -e "因此我们在安装过程中产生了一个用于https的自签名ssl证书"
 echo -e "如果你没有正式域名，请自行把 \e[32m$myip $commonname\e[0m  添加到/etc/hosts文件中"
-echo -e "你可以试下访问 \e[32mhttps://$commonname/#/wschat?rid=aaa&uid=testadmin\e[0m"
-echo -e "如有问题请访问项目网站 \e[32mhttps://github.com/ericgu2017/0secretroom\e[0m"
-echo "********************************************************************"
+echo -e "浏览器访问地址:         \e[32mhttps://$commonname/#/wschat?rid=aaa&uid=testadmin\e[0m"
+echo -e "如有问题请访问项目网站:  \e[32mhttps://github.com/ericgu2017/0secretroom\e[0m"
+echo "**********************************************************************************"
