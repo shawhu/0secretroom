@@ -21,9 +21,7 @@ read -p "Enter Y or y to start, anything else to bypass." -n 1 -r
 echo    # (optional) move to a new line
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
-    sudo apt update -y
-    sudo sleep 2
-    sudo apt upgrade -y
+    sudo apt update -y && sudo apt upgrade -y
 fi
 echo "**********************************************************************"
 echo "安装正式开始，大概需要几分钟时间中间不能打断"
