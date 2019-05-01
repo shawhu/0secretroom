@@ -1,4 +1,5 @@
 #install file for Ubuntu 16
+echo "0SecretRoom easy install Ver: 1.0"
 echo "********************************************************************"
 echo "如服务器在中国推荐使用mirrors.aliyun.com，是否允许我们调整/etc/apt/sources.list?"
 echo "If the server is in China, shall we switch /etc/apt/sources.list to use mirrors.aliyun.com?"
