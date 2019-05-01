@@ -11,6 +11,7 @@ echo    # (optional) move to a new line
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
     sudo sed -i 's/archive.ubuntu/mirrors.aliyun/g' /etc/apt/sources.list
+    echo "apt源已经替换成aliyun, apt repo has been switched to use aliyun"
 fi
 echo "********************************************************************"
 echo "推荐先跑一遍apt update更新一下系统"
