@@ -79,7 +79,8 @@ read commonname
 sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/certs/nginx-selfsigned.key -out /etc/ssl/certs/nginx-selfsigned.crt -subj "/C=US/ST=Denial/L=Springfield/O=Dis/CN=$commonname"
 #install nginx config file
 echo "Now we are going to generate a new conf file for nginx to load"
-sudo curl https://raw.githubusercontent.com/ericgu2017/0secretroom/master/nginx.conf -o /etc/nginx/conf.d/nginx.conf
+sudo rm /etc/nginx/sites-enabled/default
+sudo curl https://raw.githubusercontent.com/ericgu2017/0secretroom/master/nginx.conf -o /etc/nginx/sites-enabled/ssl.conf
 echo "nginx conf file placed, trying to load it"
 sudo nginx -s reload
 echo "nginx reloaded"
