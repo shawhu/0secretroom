@@ -22,6 +22,7 @@ echo    # (optional) move to a new line
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
     sudo apt update -y
+    sudo sleep 2
     sudo apt upgrade -y
 fi
 echo "**********************************************************************"
