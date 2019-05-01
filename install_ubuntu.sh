@@ -10,7 +10,7 @@ read -p "Enter Y or y to start, anything else to bypass." -n 1 -r
 echo    # (optional) move to a new line
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
-    sudo sed -i 's/archive.ubuntu/mirrors.aliyun/g' sources.list
+    sudo sed -i 's/archive.ubuntu/mirrors.aliyun/g' /etc/apt/sources.list
 fi
 echo "********************************************************************"
 echo "推荐先跑一遍apt update更新一下系统"
