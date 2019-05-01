@@ -1,7 +1,7 @@
 #install file for Ubuntu 16
 echo "********************************************************************"
 echo "如服务器在中国推荐使用mirrors.aliyun.com，是否允许我们调整/etc/apt/sources.list?"
-echo "If you in China, shall we switch /etc/apt/sources.list to use mirrors.aliyun.com?"
+echo "If the server is in China, shall we switch /etc/apt/sources.list to use mirrors.aliyun.com?"
 echo "********************************************************************"
 echo 
 echo "输入Y/y开始，其他键取消, Enter Y/y to switch, anything else to bypass"
@@ -9,7 +9,7 @@ read -p "Enter Y or y to start, anything else to bypass." -n 1 -r
 echo    # (optional) move to a new line
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
-    sudo sed -i 's//archive.ubuntu/mirrors.aliyun/g' sources.list
+    sudo sed -i 's/archive.ubuntu/mirrors.aliyun/g' sources.list
 fi
 echo "********************************************************************"
 echo "推荐先跑一遍apt update更新一下系统"
